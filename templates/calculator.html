@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistical calculator</title>
+</head>
+<body>
+<h1>Statistical calculator for sample size</h1>
+<form action="/" method="POST">
+    <label>
+        Liczba A:
+        <input type="number" name="a"/>
+    </label>
+    <br/>
+    <label>
+        Liczba B:
+        <input type="number" name="b"/>
+    </label>
+    <br/>
+    <label>
+        Rodzaj operacji:
+        <select name="operation">
+            <option value="add">dodaj</option>
+            <option value="subtract">odejmij</option>
+            <option value="multiply">pomnóż</option>
+            <option value="divide">podziel</option>
+        </select>
+    </label>
+    <br/>
+    <input type="submit" value="Wyślij"/>
+</form>
+
+{% if result %}
+<p>Wynik: {{ result }}</p>
+{% endif %}
+
+</body>
+</html>
